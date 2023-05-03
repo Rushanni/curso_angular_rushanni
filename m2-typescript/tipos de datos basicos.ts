@@ -40,9 +40,6 @@ console.log(notAssigned);
 function logMessage(message: string): void { console.log(message);
 }
 console.log();
-
-// Any
-
 let unknownType: any = 'Some value';
 unknownType = 42; // No hay error, ya que es de tipo 'any'
 console.log(unknownType);

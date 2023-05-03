@@ -1,0 +1,42 @@
+
+// OPCIÓN 1: SIN COMPROBAR PARÁMETRO OPCIONAL
+función  saludarPersona1 ( nombre : cadena ,  edad ?: número ) : void  {
+    consola _ log ( ` ${ firstName } con edad ${ age } ` ) ;
+}
+
+// Si no se especifica el argumento entonces tomará valor indefinido
+// saludarPersona1("Persona1");
+// saludarPersona1("Persona1", 30);
+
+// OPCIÓN 2: COMPROBAR PARÁMETRO OPCIONAL CON IF
+función  saludarPersona2 ( nombre : cadena ,  edad ?: número ) : void  {
+    if  ( edad  ===  indefinido )  {
+        consola _ log ( ` ${ firstName } con edad desconocida` ) ;
+        volver ;
+    }
+
+    consola _ log ( ` ${ firstName } con edad ${ age } ` ) ;
+}
+
+// saludarPersona2("Persona2");
+// saludarPersona2("Persona2", 30);
+
+
+// OPCIÓN 3: COMPROBAR PARÁMETRO OPCIONAL CON OPERADOR TERNARIO ? :
+función  saludarPersona3 ( nombre : cadena ,  edad ?: número ) : void  {
+    edad  ===  indefinido ?
+    consola _ log ( ` ${ firstName } con edad desconocida` ) :
+    consola _ log ( ` ${ firstName } con edad ${ age } ` ) ;
+}
+
+// saludarPersona3("Persona3");
+// saludarPersona3("Persona3", 30);
+
+// OPCIÓN 4: ASIGNAR VALOR POR DEFECTO A VARIABLE OPCIONAL CON OPERADOR ??
+
+función  saludarPersona4 ( nombre : cadena ,  edad ?: número ) : void  {
+    consola _ log ( ` ${ firstName } con edad ${ age  ??  18 } ` ) ;
+}
+
+saludarPersona4 ( "Persona4" ) ;  // 18
+saludarPersona4 ( "Persona4" ,  30 ) ;  // 30
