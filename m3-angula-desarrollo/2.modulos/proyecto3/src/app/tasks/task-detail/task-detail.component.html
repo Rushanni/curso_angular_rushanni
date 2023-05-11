@@ -5,3 +5,7 @@
 <p>Title: {{task.title}}</p>
 
 <p [ngStyle]="{'color': fontColor}"> Hours: {{task.hours}}</p>
+
+<p [ngClass]="task.hours > 5 ? 'red' : 'green'"> Hours: {{task.hours}}</p>
+
+
