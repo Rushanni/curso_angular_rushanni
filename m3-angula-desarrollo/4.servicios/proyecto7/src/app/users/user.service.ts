@@ -7,7 +7,7 @@ import { IUser } from './user.model';
   providedIn: 'root'
 })
 export class UserService {
-  url: string = "https://jsonplaceholder.typicode.com/users";
+  url: string = "https://jsonplaceholder.typicode.com/userss";
 httpOptions = {
   observe: 'response' as 'body'
 }
