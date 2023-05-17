@@ -1,1 +1,16 @@
 <p>photo-detail works!</p>
+
+<div *ngIf="photo">
+<h2>photo-detail {{photo.id}}</h2>
+
+<h3>{{photo.title}}</h3>
+
+    <img src="{{photo.url}}" alt="{{photo.title}}">
+</div>
+
+<div *ngIf="!photo">
+    <p> No se ha encontradao la foto que buscabas.</p>
+
+    <a routerLink="/photo-gallery">volver a la galeria</a>
+
+</div>
