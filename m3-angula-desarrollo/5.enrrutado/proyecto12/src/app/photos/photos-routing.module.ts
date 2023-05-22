@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+
+
+{
+  path:'', redirectTo: 'photos-gallery', pathMatch: 'full'
+},
+{
+  path:'**', redirectTo: 'photos-detail', pathMatch: 'full'
+}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
