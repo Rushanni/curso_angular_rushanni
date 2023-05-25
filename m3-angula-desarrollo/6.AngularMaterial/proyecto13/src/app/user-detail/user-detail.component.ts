@@ -12,7 +12,7 @@ export class UserDetailComponent {
     fullName: "Lucía Zamora",
     email: "usuario4@gmail.com",
     bio: "Lorem ipsum dolor asit amet ipsum",
-    avatar: "/assets/img/user-avatar1.png/user-avatar2.png"
+    avatar: "/assets/img/user-avatar1.png"
   };
   
 }

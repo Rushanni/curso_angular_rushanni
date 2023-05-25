@@ -4,4 +4,4 @@ export interface IPeriodicElement {
     position: number;
     weight: number;
     symbol: string;
-    }
+  }
