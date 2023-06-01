@@ -1,3 +1,4 @@
+
 <form [formGroup]="userForm" (ngSubmit)="save()">
 
   <div>
@@ -54,6 +55,40 @@
     </div>
   </div>
 
+  <div>
+    <label for="company">Empresa:</label>
+    <select id="company" formControlName="company">
+      <option value="">Seleccionar empresa</option>
+      <option value="Adecco">Adecco</option>
+      <option value="CertiDevs">CertiDevs</option>
+      <option value="Jobify">Jobify</option>
+      <option value="Petgram">Petgram</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="hobbies">Intereses o hobbies:</label>
+    <select id="hobbies" formControlName="hobbies" multiple>
+      <option value="music">Música</option>
+      <option value="sport">Deportes</option>
+      <option value="nature">Naturaleza</option>
+      <option value="travel">Viajar</option>
+    </select>
+    <small>Hacer Ctrl + Click para seleccionar varios.</small>
+  </div>
+
+
+  <div>
+    <label for="bio">Descripción o biografía:</label>
+    <textarea id="bio" formControlName="bio" rows="4"></textarea>
+  </div>
+
+  <div>
+
+    <label for="avatar">Foto de perfil o avatar:</label>
+    <img *ngIf="imageSrc" src="{{imageSrc}}" style="max-width: 150px;">
+    <input type="file" (change)="uploadFile($event)">
+  </div>
 
   <button type="submit">Guardar</button>
 </form>
