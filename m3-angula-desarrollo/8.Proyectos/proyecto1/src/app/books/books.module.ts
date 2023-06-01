@@ -7,8 +7,9 @@ import { BookGalleryComponent } from './book-gallery/book-gallery.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookFormComponent } from './book-form/book-form.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     BookListComponent,
@@ -19,7 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     BooksRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class BooksModule { }

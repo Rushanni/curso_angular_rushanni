@@ -9,12 +9,17 @@ import { IBook } from '../models/book.model';
 })
 export class BookListComponent implements OnInit {
 
+  displayedColumns: string[] = ['title', 'sinopsis', 'release', 'numPages', 'price', 'actions'];
   books: IBook[] = [];
 
   constructor(private bookService: BookService){}
 
   ngOnInit(): void {
     this.bookService.findAll().subscribe(data => this.books = data);
+  }
+
+  deleteBook(book: IBook){
+
   }
 
 }
