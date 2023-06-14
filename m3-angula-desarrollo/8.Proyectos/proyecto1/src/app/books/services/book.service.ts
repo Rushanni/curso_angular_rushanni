@@ -7,6 +7,9 @@ import { IBook } from '../models/book.model';
   providedIn: 'root'
 })
 export class BookService {
+  findAllByAuthorId(id: number) {
+    throw new Error('Method not implemented.');
+  }
 
   url: string = "http://localhost:3000/books";
 

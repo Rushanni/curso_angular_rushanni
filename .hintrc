@@ -24,6 +24,8 @@
           "-moz-appearance"
         ]
       }
-    ]
+    ],
+    "typescript-config/strict": "off",
+    "typescript-config/consistent-casing": "off"
   }
 }
