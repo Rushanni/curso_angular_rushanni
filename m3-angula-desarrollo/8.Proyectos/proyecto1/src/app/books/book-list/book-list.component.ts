@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../services/book.service';
 import { IBook } from '../models/book.model';
+import { IAuthor } from 'src/app/authors/models/author.model';
 
 @Component({
   selector: 'app-book-list',
@@ -11,6 +12,7 @@ export class BookListComponent implements OnInit {
 
   displayedColumns: string[] = ['title', 'sinopsis', 'release', 'numPages', 'price', 'actions'];
   books: IBook[] = [];
+  authors: IAuthor[] = [];
 
   constructor(private bookService: BookService){}
 

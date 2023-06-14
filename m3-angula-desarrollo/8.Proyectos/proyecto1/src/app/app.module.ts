@@ -12,6 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { BooksModule } from './books/books.module';
+import { AuthorsModule } from './authors/authors.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BooksModule } from './books/books.module';
     MatIconModule,
     MatToolbarModule,
     MatGridListModule,
-    BooksModule
+    BooksModule,
+    AuthorsModule,
+    CategoriesModule
 
   ],
   providers: [],
