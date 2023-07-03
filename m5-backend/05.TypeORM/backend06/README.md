@@ -44,19 +44,40 @@ Módulo categories:
 * nest generate service categories
 * Crear categories.model.ts o locations.entity.ts
 
+Módulo Users:
+* nest generate module users
+* nest generate controller users
+* nest generate service users
+* Modelo User y Rol
+
+Módulo Reserva:
+* nest generate module bookings
+* nest generate controller bookings
+* nest generate service bookings
+* Modelo reserva
 
 Asociaciones:
 * ManyToOne Book - Author
 * ManyToOne Book - Editorial
 * OneToOne Author - Location
 * ManyToMany Book - Category
+* ManyToOne Reserva - User
+* ManyToOne Reserva - Book
 
 
+TODOs obligatorios:
+* Enlazar NestJS con Angular
+* Ajustar CRUD Angular para enviar información a NestJS
+* Seguridad: login, registro
 
-Módulo Users:
-* Modelo User y Rol
+TODOs opcionales:
+* Crear array de imágenes para libro
+* Activar swagger
+* Mockaroo db.sql
+* Inserción automática de scripts de sql
+* Subida de archivos 
 
-Módulo Orders:
-* Modelos: Order y OrderItem
-
-Crear array de imágenes para libro
+Ejemplo One To Many: (Preferible usar ManyToOne en su lugar para guardar la asociación)
+* OneToMany - Author books[]
+* ManyToOne - Book 
+* findAllByAuthorId
