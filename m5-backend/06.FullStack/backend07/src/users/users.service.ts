@@ -5,6 +5,9 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class UsersService {
+    findByEmail(email: string) {
+        throw new Error('Method not implemented.');
+    }
 
 
     constructor(

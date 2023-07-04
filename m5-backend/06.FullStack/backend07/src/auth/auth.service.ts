@@ -1,5 +1,5 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
+import { JwtService } from 'nestjs/jwt';
 import { UsersService } from 'src/users/users.service';
 import { LoginDTO } from './dto/login.dto';
 import { TokenDTO } from './dto/token.dto';
@@ -28,7 +28,8 @@ export class AuthService {
         
         let payload = {
             email: user.email,
-            sub: user.id
+            sub: user.id,
+            role: user.role
         }
 
         let token: TokenDTO = {
